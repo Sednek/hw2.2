@@ -14,4 +14,10 @@ public class Car extends Transport {
     public void updateTyre() {
         System.out.println("Меняем покрышку у машины");
     }
+
+    @Override
+    public void check() {
+        checkTyres();
+        checkEngine();
+    }
 }

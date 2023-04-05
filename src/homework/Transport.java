@@ -1,6 +1,6 @@
 package homework;
 
-public class Transport {
+public abstract class Transport {
     private final String modelName;
     private final int wheelsCount;
 
@@ -17,9 +17,9 @@ public class Transport {
         return wheelsCount;
     }
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
+    public abstract void updateTyre();
+
+    public abstract void check();
 
     public void checkTyres() {
         System.out.println("Обслуживаем " + this.getModelName());

@@ -10,6 +10,13 @@ public class Truck extends Transport {
         System.out.println("Меняем покрышку у грузовика");
     }
 
+    @Override
+    public void check() {
+        checkTyres();
+        checkEngine();
+        checkTrailer();
+    }
+
     public void checkEngine() {
         System.out.println("Проверяем двигатель у грузовика");
     }
