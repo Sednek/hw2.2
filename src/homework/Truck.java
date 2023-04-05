@@ -1,15 +1,24 @@
 package homework;
-public class Truck {
 
-    public String modelName;
-    public int wheelsCount;
+public class Truck extends Transport {
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
 
+    @Override
     public void updateTyre() {
-        System.out.println("Меняем покрышку");
+        System.out.println("Меняем покрышку у грузовика");
+    }
+
+    @Override
+    public void check() {
+        checkTyres();
+        checkEngine();
+        checkTrailer();
     }
 
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель у грузовика");
     }
 
     public void checkTrailer() {
